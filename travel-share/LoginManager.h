@@ -12,7 +12,7 @@
 
 @property BOOL isLogin;
 
-+ (LoginManager *)sharedInstance;
++ (LoginManager *)sharedManager;
 
 - (void)me:(void (^)(BOOL success, NSError *error))completion;
 - (void)loginWithId:(NSString *)userId password:(NSString *)password completionHandler:(void (^)(BOOL success, NSError *error))completion;

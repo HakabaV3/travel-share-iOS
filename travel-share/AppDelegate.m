@@ -30,7 +30,7 @@
 }
 
 - (void)setLoginManager {
-    [[LoginManager sharedInstance] me:^(BOOL success, NSError *error) {
+    [[LoginManager sharedManager] me:^(BOOL success, NSError *error) {
         if (!success) {
             NSLog(@"\n未ログイン");
         }

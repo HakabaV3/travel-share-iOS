@@ -41,7 +41,7 @@
     
     [self.alertController addAction:[self cancelActionWithTitle:@"NO"]];
     [self.alertController addAction:[UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [[LoginManager sharedInstance] logout];
+        [[LoginManager sharedManager] logout];
         [self.alertController dismissViewControllerAnimated:true completion:nil];
         [self.parentViewController dismissViewControllerAnimated:true completion:nil];
     }]];
@@ -56,7 +56,7 @@
     
     [self.alertController addAction:[self cancelActionWithTitle:@"NO"]];
     [self.alertController addAction:[UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [[LoginManager sharedInstance] resign:^(BOOL success, NSError *error) {
+        [[LoginManager sharedManager] resign:^(BOOL success, NSError *error) {
             if (!success) {
                 NSLog(@"失敗");
             }

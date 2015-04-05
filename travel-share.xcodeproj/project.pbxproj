@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A3413778C8A715C35DE2801 /* libPods-travel-share.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA9EF0EC28AD7FF5E2E0C24 /* libPods-travel-share.a */; };
+		CA1AA5521AD170A800153CDD /* TravelFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1AA5511AD170A800153CDD /* TravelFormController.m */; };
 		CAA021F21AD0F01E003FA000 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA021F11AD0F01E003FA000 /* Alert.m */; };
 		CAA021F81AD11CFF003FA000 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA021F71AD11CFF003FA000 /* LoginManager.m */; };
 		CAA021FB1AD12D14003FA000 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA021FA1AD12D14003FA000 /* SettingController.m */; };
@@ -20,7 +21,6 @@
 		CAEBBF061ACFB44E001D7186 /* travel_shareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF051ACFB44E001D7186 /* travel_shareTests.m */; };
 		CAEBBF151ACFB544001D7186 /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF141ACFB544001D7186 /* Travel.m */; };
 		CAEBBF181ACFB6B4001D7186 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF171ACFB6B4001D7186 /* Request.m */; };
-		CAEBBF1B1ACFB95A001D7186 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF1A1ACFB95A001D7186 /* Notifications.m */; };
 		CAEBBF1F1ACFBA42001D7186 /* TravelTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF1E1ACFBA42001D7186 /* TravelTableViewDataSource.m */; };
 		CAEBBF221ACFC7DB001D7186 /* TravelDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF211ACFC7DB001D7186 /* TravelDetailController.m */; };
 		CAEBBF251ACFC885001D7186 /* TravelDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF241ACFC885001D7186 /* TravelDetailView.m */; };
@@ -40,6 +40,8 @@
 /* Begin PBXFileReference section */
 		3AA9EF0EC28AD7FF5E2E0C24 /* libPods-travel-share.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travel-share.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE361280104CF6EA66D325D /* Pods-travel-share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel-share.release.xcconfig"; path = "Pods/Target Support Files/Pods-travel-share/Pods-travel-share.release.xcconfig"; sourceTree = "<group>"; };
+		CA1AA5501AD170A800153CDD /* TravelFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelFormController.h; sourceTree = "<group>"; };
+		CA1AA5511AD170A800153CDD /* TravelFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelFormController.m; sourceTree = "<group>"; };
 		CA7DB8D11AD0E708008B6C85 /* travel-share-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "travel-share-Prefix.pch"; sourceTree = "<group>"; };
 		CAA021F01AD0F01E003FA000 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		CAA021F11AD0F01E003FA000 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
@@ -65,8 +67,6 @@
 		CAEBBF141ACFB544001D7186 /* Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Travel.m; sourceTree = "<group>"; };
 		CAEBBF161ACFB6B4001D7186 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
 		CAEBBF171ACFB6B4001D7186 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
-		CAEBBF191ACFB95A001D7186 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
-		CAEBBF1A1ACFB95A001D7186 /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
 		CAEBBF1D1ACFBA42001D7186 /* TravelTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelTableViewDataSource.h; sourceTree = "<group>"; };
 		CAEBBF1E1ACFBA42001D7186 /* TravelTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelTableViewDataSource.m; sourceTree = "<group>"; };
 		CAEBBF201ACFC7DB001D7186 /* TravelDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelDetailController.h; sourceTree = "<group>"; };
@@ -147,6 +147,8 @@
 				CAEBBEF11ACFB44E001D7186 /* TravelListController.m */,
 				CAEBBF201ACFC7DB001D7186 /* TravelDetailController.h */,
 				CAEBBF211ACFC7DB001D7186 /* TravelDetailController.m */,
+				CA1AA5501AD170A800153CDD /* TravelFormController.h */,
+				CA1AA5511AD170A800153CDD /* TravelFormController.m */,
 			);
 			name = Travel;
 			sourceTree = "<group>";
@@ -237,8 +239,6 @@
 				CA7DB8D11AD0E708008B6C85 /* travel-share-Prefix.pch */,
 				CAEBBEED1ACFB44E001D7186 /* AppDelegate.h */,
 				CAEBBEEE1ACFB44E001D7186 /* AppDelegate.m */,
-				CAEBBF191ACFB95A001D7186 /* Notifications.h */,
-				CAEBBF1A1ACFB95A001D7186 /* Notifications.m */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -402,9 +402,9 @@
 				CAEBBF251ACFC885001D7186 /* TravelDetailView.m in Sources */,
 				CAEBBF281ACFCBB5001D7186 /* SignInController.m in Sources */,
 				CAA021F81AD11CFF003FA000 /* LoginManager.m in Sources */,
+				CA1AA5521AD170A800153CDD /* TravelFormController.m in Sources */,
 				CAA021FB1AD12D14003FA000 /* SettingController.m in Sources */,
 				CAEBBEEF1ACFB44E001D7186 /* AppDelegate.m in Sources */,
-				CAEBBF1B1ACFB95A001D7186 /* Notifications.m in Sources */,
 				CAEBBEEC1ACFB44E001D7186 /* main.m in Sources */,
 				CAB9383D1ACFE770009CAF12 /* SignUpController.m in Sources */,
 				CAEBBF1F1ACFBA42001D7186 /* TravelTableViewDataSource.m in Sources */,

@@ -8,7 +8,8 @@
 
 #import "Travel.h"
 #import "Request.h"
-#import "Notifications.h"
+
+NSString *const kTravelPath = @"/travel";
 
 @implementation Travel
 
@@ -21,13 +22,14 @@
     return self;
 }
 
-+ (void)getTravelList {
+/**
+ *  参加済みTravel一覧
+ */
++ (void)getTravelListWithUserId:(NSString *)userId completionHandler:(void (^)(BOOL, NSArray *, NSError *))completion {
     id completionHandler = ^(NSURLResponse *response, NSData *jsonData, NSError *error) {
         if (jsonData == nil) {
             NSLog(@"JSON Data is nil.");
-            [[NSNotificationCenter defaultCenter] postNotificationName:FailureGetTravelList
-                                                                object:self
-                                                              userInfo:nil];
+            completion(false, nil, error);
             return;
         }
         NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
@@ -36,9 +38,7 @@
         
         if ([[jsonObj objectForKey:@"status"] isEqualToString:@"NG"]) {
             NSLog(@"HTTP Error : 404");
-            [[NSNotificationCenter defaultCenter] postNotificationName:FailureGetTravelList
-                                                                object:self
-                                                              userInfo:nil];
+            completion(false, nil, error);
             return;
         }
         
@@ -51,45 +51,74 @@
             [travelList addObject:travel];
         }
         
-        NSDictionary *userInfo = @{@"travels" : travelList};
-        [[NSNotificationCenter defaultCenter] postNotificationName:SuccessGetTravelList
-                                                            object:self
-                                                          userInfo:userInfo];
+        completion(true, travelList, nil);
     };
     
-    NSString *path = @"/travel";
-    [Request getWithPath:path needToken:false completionHandler:completionHandler];
+    NSString *path = [NSString stringWithFormat:@"%@/%@/joined", kTravelPath, userId];
+    [Request getWithPath:path needToken:true completionHandler:completionHandler];
 }
 
-
-+ (void)getTravelListWithId:(NSString *)travelId {
+/**
+ *  Travel詳細
+ */
++ (void)getTravelListWithId:(NSString *)travelId completionHandler:(void (^)(BOOL success, Travel *travel, NSError *error))completion {
     id completionHandler = ^(NSURLResponse *response, NSData *jsonData, NSError *error) {
         if (jsonData == nil) {
             NSLog(@"JSON Data is nil.");
-            [[NSNotificationCenter defaultCenter] postNotificationName:FailureGetTravelObject
-                                                                object:self
-                                                              userInfo:nil];
+            completion(false, nil, error);
             return;
         }
         
         NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                 options:NSJSONReadingAllowFragments
                                                                   error:&error];
-        NSDictionary *results = [jsonObj objectForKey:@"result"];
+        NSDictionary *result = [jsonObj objectForKey:@"result"];
         
-        Travel *travel = [[Travel alloc] initWithTravelDictionary:results];
-        
-        NSDictionary *userInfo = @{@"travel" : travel};
-        [[NSNotificationCenter defaultCenter] postNotificationName:SuccessGetTravelObject
-                                                            object:self
-                                                          userInfo:userInfo];
+        if ([[jsonObj objectForKey:@"status"] isEqualToString:@"NG"]) {
+            NSLog(@"%@", result);
+            completion(false, nil, error);
+            return;
+        }
 
+        Travel *travel = [[Travel alloc] initWithTravelDictionary:result];
+        completion(true, travel, nil);
     };
     
-    NSString *path = [NSString stringWithFormat:@"/travel/%@", travelId];
+    NSString *path = [NSString stringWithFormat:@"%@/%@", kTravelPath, travelId];
     [Request getWithPath:path needToken:false completionHandler:completionHandler];
 }
 
+/**
+ *  Travel新規作成
+ */
++ (void)postTravelWithName:(NSString *)name completionHandler:(void (^)(BOOL success, Travel *travel, NSError *error))completion {
+    id completionHandler = ^(NSURLResponse *response, NSData *jsonData, NSError *error) {
+        if (jsonData == nil) {
+            NSLog(@"JSON Data is nil.");
+            completion(false, nil, error);
+            return;
+        }
+        
+        NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                options:NSJSONReadingAllowFragments
+                                                                  error:&error];
+        NSDictionary *result = [jsonObj objectForKey:@"result"];
+        
+        if ([[jsonObj objectForKey:@"status"] isEqualToString:@"NG"]) {
+            NSLog(@"%@", result);
+            completion(false, nil, error);
+            return;
+        }
+
+        Travel *travel = [[Travel alloc] initWithTravelDictionary:result];
+        completion(true, travel, nil);
+    };
+    
+    NSString *path = kTravelPath;
+    NSMutableDictionary *param = @{}.mutableCopy;
+    [param setValue:name forKey:@"name"];
+    [Request postWithPath:path param:param needToken:true completionHandler:completionHandler];
+}
 
 
 @end

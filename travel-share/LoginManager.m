@@ -7,7 +7,6 @@
 //
 
 #import "LoginManager.h"
-#import "Notifications.h"
 #import "Request.h"
 
 #import <UICKeyChainStore/UICKeyChainStore.h>
@@ -25,7 +24,7 @@ NSString *const kUserPasswordKey = @"kUserPasswordKey";
 
 static LoginManager *s_self = nil;
 
-+ (LoginManager *)sharedInstance{
++ (LoginManager *)sharedManager{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         s_self = [[LoginManager alloc] init];

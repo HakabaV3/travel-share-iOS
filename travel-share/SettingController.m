@@ -122,9 +122,9 @@
         }
         
         if (row == 0) {
-            cell.textLabel.text = [[LoginManager sharedInstance] userId];
+            cell.textLabel.text = [[LoginManager sharedManager] userId];
         } else if (row == 1) {
-            cell.textLabel.text = [[LoginManager sharedInstance] userName];
+            cell.textLabel.text = [[LoginManager sharedManager] userName];
         }
     }
     

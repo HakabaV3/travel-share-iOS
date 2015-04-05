@@ -7,13 +7,15 @@
 //
 
 #import "TravelListController.h"
-#import "Notifications.h"
-
 #import "TravelTableViewDataSource.h"
+
 #import "TravelDetailController.h"
+#import "TravelFormController.h"
 #import "SettingController.h"
 
 #import "Travel.h"
+
+#import "Alert.h"
 #import "LoginManager.h"
 
 @interface TravelListController ()<UITableViewDelegate>
@@ -26,9 +28,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSuccessGetShopList:) name:SuccessGetTravelList object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onFailureGetShopList:) name:FailureGetTravelList object:nil];
-    
     self.datasource = [[TravelTableViewDataSource alloc] init];
     self.tableView.dataSource = self.datasource;
     self.tableView.delegate = self;
@@ -51,27 +50,23 @@
                                                             target:self
                                                             action:@selector(leftBarButtonAction:)];
     self.navigationItem.leftBarButtonItem = left;
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"new"
+                                                              style:UIBarButtonItemStyleDone
+                                                             target:self
+                                                             action:@selector(rightBarButtonAction:)];
+    self.navigationItem.rightBarButtonItem = right;
 }
 
 - (void)leftBarButtonAction:(UIBarButtonItem *)sender {
-    SettingController *settingController = [[SettingController alloc] initWIthIsLogin:[[LoginManager sharedInstance] isLogin]];
+    SettingController *settingController = [[SettingController alloc] initWIthIsLogin:[[LoginManager sharedManager] isLogin]];
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:settingController];
     [self presentViewController:navi animated:YES completion:nil];
 }
 
-#pragma mark - NSNotification
-
-- (void)onSuccessGetShopList:(NSNotification *)notificationCenter {
-    NSArray *travels = [[notificationCenter userInfo] objectForKey:@"travels"];
-    self.datasource.travels = travels;
-    [self.tableView reloadData];
-    [self.refreshControl endRefreshing];
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-}
-
-- (void)onFailureGetShopList:(NSNotification *)notificationCenter {
-    [self.refreshControl endRefreshing];
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+- (void)rightBarButtonAction:(UIBarButtonItem *)sender {
+    TravelFormController *formController = [[TravelFormController alloc] init];
+    [self.navigationController pushViewController:formController animated:true];
 }
 
 #pragma mark - UIRefreshControl
@@ -83,7 +78,20 @@
 - (void)refreshTravelList {
     [self.refreshControl beginRefreshing];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [Travel getTravelList];
+    
+    NSString *userId = [[LoginManager sharedManager] userId];
+    [Travel getTravelListWithUserId:userId completionHandler:^(BOOL success, NSArray *travels, NSError *error) {
+        [self.refreshControl endRefreshing];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        
+        if (!success) {
+            Alert *alert = [[Alert alloc] initWithParentViewController:self];
+            [alert showWithErrorMessage:@"旅行プランの取得に失敗しました。"];
+            return;
+        }
+        self.datasource.travels = travels;
+        [self.tableView reloadData];
+    }];
 }
 
 #pragma mark - UITableView Delegate

@@ -14,8 +14,9 @@
 @property (nonatomic, strong) NSArray *member;
 @property (nonatomic, strong) NSArray *places;
 
-+ (void)getTravelList;
-+ (void)getTravelListWithId:(NSString *)travelId;
++ (void)getTravelListWithUserId:(NSString *)userId completionHandler:(void (^)(BOOL success, NSArray *travels, NSError *error))completion;
++ (void)getTravelListWithId:(NSString *)travelId completionHandler:(void (^)(BOOL success, Travel *travel, NSError *error))completion;
++ (void)postTravelWithName:(NSString *)name completionHandler:(void (^)(BOOL success, Travel *travel, NSError *error))completion;
 
 @end
 

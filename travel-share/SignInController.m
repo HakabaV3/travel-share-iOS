@@ -63,7 +63,7 @@
     
     NSString *userId = self.userIdField.text;
     NSString *password = self.passwordField.text;
-    [[LoginManager sharedInstance] loginWithId:userId password:password completionHandler:^(BOOL success, NSError *error) {
+    [[LoginManager sharedManager] loginWithId:userId password:password completionHandler:^(BOOL success, NSError *error) {
         if (!success) {
             Alert *alert = [[Alert alloc] initWithParentViewController:self];
             [alert showWithErrorMessage:@"ユーザーIDまたはパスワードに誤りがあります。"];

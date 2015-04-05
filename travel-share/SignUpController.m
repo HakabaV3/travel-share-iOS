@@ -52,14 +52,14 @@
     NSString *userName = self.userNameField.text;
     NSString *password = self.passwordField.text;
     LOG(@"\nID: %@\nName: %@\npassword: %@", userId, userName, password);
-    [[LoginManager sharedInstance] signupWithId:userId userName:userName password:password completionHandler:^(BOOL success, NSError *error) {
+    [[LoginManager sharedManager] signupWithId:userId userName:userName password:password completionHandler:^(BOOL success, NSError *error) {
         if (!success) {
             Alert *alert = [[Alert alloc] initWithParentViewController:self];
             [alert showWithErrorMessage:@"ユーザーIDは既に使用されています。"];
             return;
         }
         
-        [[LoginManager sharedInstance] loginWithId:userId password:password completionHandler:^(BOOL success, NSError *error) {
+        [[LoginManager sharedManager] loginWithId:userId password:password completionHandler:^(BOOL success, NSError *error) {
             if (!success) {
                 Alert *alert = [[Alert alloc] initWithParentViewController:self];
                 [alert showWithErrorMessage:@"ログインに失敗しました。"];
