@@ -129,11 +129,8 @@ static LoginManager *s_self = nil;
         }
         
         NSDictionary *result = [jsonObj objectForKey:@"result"];
-        NSDictionary *userInfo = result[@"user"];
-        self.isLogin = true;
-        [self setAccessToken:result[@"token"]];
-        [self setUserId:userInfo[@"userId"]];
-        [self setUserName:userInfo[@"name"]];
+        [self setUserId:result[@"userId"]];
+        [self setUserName:result[@"name"]];
         [self setPassword:password];
         
         completion(true, nil);
@@ -150,7 +147,28 @@ static LoginManager *s_self = nil;
  *  ログアウト
  */
 - (void)logout {
-    [self resetStatus];
+    id completionHandler = ^(NSURLResponse *response, NSData *jsonData, NSError *error) {
+        if (jsonData == nil) {
+            NSLog(@"JSON Data is nil.");
+            return;
+        }
+        NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                options:NSJSONReadingAllowFragments
+                                                                  error:&error];
+        
+        if ([[jsonObj objectForKey:@"status"] isEqualToString:@"NG"]) {
+            NSLog(@"%@", jsonObj);
+            return;
+        }
+        
+        [self resetStatus];
+        
+    };
+    
+    NSString *path = [NSString stringWithFormat:@"/auth/%@", [self userId]];
+    NSMutableDictionary *param = @{}.mutableCopy;
+    [param setValue:[self password] forKey:@"password"];
+    [Request deleteWithPath:path param:param needToekn:true comletionHandler:completionHandler];
 }
 
 /**

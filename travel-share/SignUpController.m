@@ -58,7 +58,15 @@
             [alert showWithErrorMessage:@"ユーザーIDは既に使用されています。"];
             return;
         }
-        [self dismissViewControllerAnimated:true completion:nil];
+        
+        [[LoginManager sharedInstance] loginWithId:userId password:password completionHandler:^(BOOL success, NSError *error) {
+            if (!success) {
+                Alert *alert = [[Alert alloc] initWithParentViewController:self];
+                [alert showWithErrorMessage:@"ログインに失敗しました。"];
+                return;
+            }
+            [self dismissViewControllerAnimated:true completion:nil];
+        }];
     }];
 }
 

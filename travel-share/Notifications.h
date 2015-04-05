@@ -16,16 +16,3 @@ UIKIT_EXTERN NSString *const FailureGetTravelList;
 UIKIT_EXTERN NSString *const SuccessGetTravelObject;
 UIKIT_EXTERN NSString *const FailureGetTravelObject;
 
-/**
- *  Auth
- */
-UIKIT_EXTERN NSString *const SuccessGetAuth;
-UIKIT_EXTERN NSString *const FailureGetAuth;
-UIKIT_EXTERN NSString *const SuccessPostAuth;
-UIKIT_EXTERN NSString *const FailurePostAuth;
-
-/**
- *  User
- */
-UIKIT_EXTERN NSString *const SuccessPostUser;
-UIKIT_EXTERN NSString *const FailurePostUser;

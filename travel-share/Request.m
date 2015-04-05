@@ -27,6 +27,7 @@ NSString *const kServerDomain = @"http://localhost:3000/api/v1";
     }
     if (needToken) {
         [request setValue:[[LoginManager sharedInstance] accessToken] forHTTPHeaderField:@"X-Token"];
+        NSLog(@"\nToken : %@", [[LoginManager sharedInstance] accessToken]);
     }
     return request;
 }

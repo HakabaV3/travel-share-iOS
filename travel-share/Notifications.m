@@ -15,9 +15,3 @@ NSString * const SuccessGetTravelList = @"SuccessGetTravelList";
 NSString * const FailureGetTravelList = @"FailureGetTravelList";
 NSString * const SuccessGetTravelObject = @"SuccessGetTravelObject";
 NSString * const FailureGetTravelObject = @"FailureGetTravelObject";
-
-/**
- *  Auth
- */
-NSString * const SuccessGetAuth = @"SuccessGetAuth";
-NSString * const FailureGetAuth = @"FailureGetAuth";
