@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TravelDetailView.h
 //  travel-share
 //
 //  Created by sho on 2015/04/04.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Travel.h"
 
-@interface ViewController : UIViewController
+@interface TravelDetailView : UIView
 
+- (void)setTravel:(Travel *)travel;
 
 @end
-

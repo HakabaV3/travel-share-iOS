@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3413778C8A715C35DE2801 /* libPods-travel-share.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA9EF0EC28AD7FF5E2E0C24 /* libPods-travel-share.a */; };
+		CAA021F21AD0F01E003FA000 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA021F11AD0F01E003FA000 /* Alert.m */; };
+		CAA021F81AD11CFF003FA000 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA021F71AD11CFF003FA000 /* LoginManager.m */; };
+		CAA021FB1AD12D14003FA000 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA021FA1AD12D14003FA000 /* SettingController.m */; };
+		CAB9383D1ACFE770009CAF12 /* SignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB9383C1ACFE770009CAF12 /* SignUpController.m */; };
 		CAEBBEEC1ACFB44E001D7186 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBEEB1ACFB44E001D7186 /* main.m */; };
 		CAEBBEEF1ACFB44E001D7186 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBEEE1ACFB44E001D7186 /* AppDelegate.m */; };
-		CAEBBEF21ACFB44E001D7186 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBEF11ACFB44E001D7186 /* ViewController.m */; };
-		CAEBBEF51ACFB44E001D7186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEBBEF31ACFB44E001D7186 /* Main.storyboard */; };
+		CAEBBEF21ACFB44E001D7186 /* TravelListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBEF11ACFB44E001D7186 /* TravelListController.m */; };
 		CAEBBEF71ACFB44E001D7186 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEBBEF61ACFB44E001D7186 /* Images.xcassets */; };
 		CAEBBEFA1ACFB44E001D7186 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEBBEF81ACFB44E001D7186 /* LaunchScreen.xib */; };
 		CAEBBF061ACFB44E001D7186 /* travel_shareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF051ACFB44E001D7186 /* travel_shareTests.m */; };
+		CAEBBF151ACFB544001D7186 /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF141ACFB544001D7186 /* Travel.m */; };
+		CAEBBF181ACFB6B4001D7186 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF171ACFB6B4001D7186 /* Request.m */; };
+		CAEBBF1B1ACFB95A001D7186 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF1A1ACFB95A001D7186 /* Notifications.m */; };
+		CAEBBF1F1ACFBA42001D7186 /* TravelTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF1E1ACFBA42001D7186 /* TravelTableViewDataSource.m */; };
+		CAEBBF221ACFC7DB001D7186 /* TravelDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF211ACFC7DB001D7186 /* TravelDetailController.m */; };
+		CAEBBF251ACFC885001D7186 /* TravelDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF241ACFC885001D7186 /* TravelDetailView.m */; };
+		CAEBBF281ACFCBB5001D7186 /* SignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEBBF271ACFCBB5001D7186 /* SignInController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +38,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AA9EF0EC28AD7FF5E2E0C24 /* libPods-travel-share.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travel-share.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE361280104CF6EA66D325D /* Pods-travel-share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel-share.release.xcconfig"; path = "Pods/Target Support Files/Pods-travel-share/Pods-travel-share.release.xcconfig"; sourceTree = "<group>"; };
+		CA7DB8D11AD0E708008B6C85 /* travel-share-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "travel-share-Prefix.pch"; sourceTree = "<group>"; };
+		CAA021F01AD0F01E003FA000 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		CAA021F11AD0F01E003FA000 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		CAA021F61AD11CFF003FA000 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		CAA021F71AD11CFF003FA000 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		CAA021F91AD12D14003FA000 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		CAA021FA1AD12D14003FA000 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		CAB9383B1ACFE770009CAF12 /* SignUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpController.h; sourceTree = "<group>"; };
+		CAB9383C1ACFE770009CAF12 /* SignUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpController.m; sourceTree = "<group>"; };
 		CAEBBEE61ACFB44E001D7186 /* travel-share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "travel-share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEBBEEA1ACFB44E001D7186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAEBBEEB1ACFB44E001D7186 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CAEBBEED1ACFB44E001D7186 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAEBBEEE1ACFB44E001D7186 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAEBBEF01ACFB44E001D7186 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CAEBBEF11ACFB44E001D7186 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CAEBBEF41ACFB44E001D7186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAEBBEF01ACFB44E001D7186 /* TravelListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelListController.h; sourceTree = "<group>"; };
+		CAEBBEF11ACFB44E001D7186 /* TravelListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravelListController.m; sourceTree = "<group>"; };
 		CAEBBEF61ACFB44E001D7186 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAEBBEF91ACFB44E001D7186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CAEBBEFF1ACFB44E001D7186 /* travel-shareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "travel-shareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEBBF041ACFB44E001D7186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAEBBF051ACFB44E001D7186 /* travel_shareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = travel_shareTests.m; sourceTree = "<group>"; };
+		CAEBBF131ACFB544001D7186 /* Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Travel.h; sourceTree = "<group>"; };
+		CAEBBF141ACFB544001D7186 /* Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Travel.m; sourceTree = "<group>"; };
+		CAEBBF161ACFB6B4001D7186 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		CAEBBF171ACFB6B4001D7186 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+		CAEBBF191ACFB95A001D7186 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		CAEBBF1A1ACFB95A001D7186 /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
+		CAEBBF1D1ACFBA42001D7186 /* TravelTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelTableViewDataSource.h; sourceTree = "<group>"; };
+		CAEBBF1E1ACFBA42001D7186 /* TravelTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelTableViewDataSource.m; sourceTree = "<group>"; };
+		CAEBBF201ACFC7DB001D7186 /* TravelDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelDetailController.h; sourceTree = "<group>"; };
+		CAEBBF211ACFC7DB001D7186 /* TravelDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelDetailController.m; sourceTree = "<group>"; };
+		CAEBBF231ACFC885001D7186 /* TravelDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelDetailView.h; sourceTree = "<group>"; };
+		CAEBBF241ACFC885001D7186 /* TravelDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelDetailView.m; sourceTree = "<group>"; };
+		CAEBBF261ACFCBB5001D7186 /* SignInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInController.h; sourceTree = "<group>"; };
+		CAEBBF271ACFCBB5001D7186 /* SignInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInController.m; sourceTree = "<group>"; };
+		F5E10EDA1A47608847659A2A /* Pods-travel-share.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travel-share.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travel-share/Pods-travel-share.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3413778C8A715C35DE2801 /* libPods-travel-share.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +97,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54D99D6E54B6AAF6D82A48F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA9EF0EC28AD7FF5E2E0C24 /* libPods-travel-share.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E08AC2BF6AD67D1C861CDC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5E10EDA1A47608847659A2A /* Pods-travel-share.debug.xcconfig */,
+				9CE361280104CF6EA66D325D /* Pods-travel-share.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAA021EC1AD0EFA4003FA000 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CAA021F01AD0F01E003FA000 /* Alert.h */,
+				CAA021F11AD0F01E003FA000 /* Alert.m */,
+				CAA021F61AD11CFF003FA000 /* LoginManager.h */,
+				CAA021F71AD11CFF003FA000 /* LoginManager.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		CAB938391ACFE743009CAF12 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CAA021F91AD12D14003FA000 /* SettingController.h */,
+				CAA021FA1AD12D14003FA000 /* SettingController.m */,
+				CAEBBF261ACFCBB5001D7186 /* SignInController.h */,
+				CAEBBF271ACFCBB5001D7186 /* SignInController.m */,
+				CAB9383B1ACFE770009CAF12 /* SignUpController.h */,
+				CAB9383C1ACFE770009CAF12 /* SignUpController.m */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		CAB9383A1ACFE753009CAF12 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				CAEBBF1C1ACFBA17001D7186 /* DataSource */,
+				CAEBBF121ACFB485001D7186 /* View */,
+				CAEBBEF01ACFB44E001D7186 /* TravelListController.h */,
+				CAEBBEF11ACFB44E001D7186 /* TravelListController.m */,
+				CAEBBF201ACFC7DB001D7186 /* TravelDetailController.h */,
+				CAEBBF211ACFC7DB001D7186 /* TravelDetailController.m */,
+			);
+			name = Travel;
+			sourceTree = "<group>";
+		};
 		CAEBBEDD1ACFB44E001D7186 = {
 			isa = PBXGroup;
 			children = (
 				CAEBBEE81ACFB44E001D7186 /* travel-share */,
 				CAEBBF021ACFB44E001D7186 /* travel-shareTests */,
 				CAEBBEE71ACFB44E001D7186 /* Products */,
+				7E08AC2BF6AD67D1C861CDC1 /* Pods */,
+				54D99D6E54B6AAF6D82A48F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +174,10 @@
 		CAEBBEE81ACFB44E001D7186 /* travel-share */ = {
 			isa = PBXGroup;
 			children = (
-				CAEBBEED1ACFB44E001D7186 /* AppDelegate.h */,
-				CAEBBEEE1ACFB44E001D7186 /* AppDelegate.m */,
-				CAEBBEF01ACFB44E001D7186 /* ViewController.h */,
-				CAEBBEF11ACFB44E001D7186 /* ViewController.m */,
-				CAEBBEF31ACFB44E001D7186 /* Main.storyboard */,
+				CAEBBF111ACFB47D001D7186 /* Application */,
+				CAEBBF101ACFB477001D7186 /* Controller */,
+				CAEBBF0F1ACFB471001D7186 /* Model */,
+				CAA021EC1AD0EFA4003FA000 /* Util */,
 				CAEBBEF61ACFB44E001D7186 /* Images.xcassets */,
 				CAEBBEF81ACFB44E001D7186 /* LaunchScreen.xib */,
 				CAEBBEE91ACFB44E001D7186 /* Supporting Files */,
@@ -119,6 +211,56 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CAEBBF0F1ACFB471001D7186 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAEBBF161ACFB6B4001D7186 /* Request.h */,
+				CAEBBF171ACFB6B4001D7186 /* Request.m */,
+				CAEBBF131ACFB544001D7186 /* Travel.h */,
+				CAEBBF141ACFB544001D7186 /* Travel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CAEBBF101ACFB477001D7186 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CAB938391ACFE743009CAF12 /* Auth */,
+				CAB9383A1ACFE753009CAF12 /* Travel */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CAEBBF111ACFB47D001D7186 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CA7DB8D11AD0E708008B6C85 /* travel-share-Prefix.pch */,
+				CAEBBEED1ACFB44E001D7186 /* AppDelegate.h */,
+				CAEBBEEE1ACFB44E001D7186 /* AppDelegate.m */,
+				CAEBBF191ACFB95A001D7186 /* Notifications.h */,
+				CAEBBF1A1ACFB95A001D7186 /* Notifications.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		CAEBBF121ACFB485001D7186 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAEBBF231ACFC885001D7186 /* TravelDetailView.h */,
+				CAEBBF241ACFC885001D7186 /* TravelDetailView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CAEBBF1C1ACFBA17001D7186 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CAEBBF1D1ACFBA42001D7186 /* TravelTableViewDataSource.h */,
+				CAEBBF1E1ACFBA42001D7186 /* TravelTableViewDataSource.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAEBBF091ACFB44E001D7186 /* Build configuration list for PBXNativeTarget "travel-share" */;
 			buildPhases = (
+				8950EA6B7858AE5DEEF500AB /* Check Pods Manifest.lock */,
 				CAEBBEE21ACFB44E001D7186 /* Sources */,
 				CAEBBEE31ACFB44E001D7186 /* Frameworks */,
 				CAEBBEE41ACFB44E001D7186 /* Resources */,
+				77C7A46CE726383537D85C82 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +343,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAEBBEF51ACFB44E001D7186 /* Main.storyboard in Resources */,
 				CAEBBEFA1ACFB44E001D7186 /* LaunchScreen.xib in Resources */,
 				CAEBBEF71ACFB44E001D7186 /* Images.xcassets in Resources */,
 			);
@@ -214,14 +357,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77C7A46CE726383537D85C82 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-travel-share/Pods-travel-share-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8950EA6B7858AE5DEEF500AB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CAEBBEE21ACFB44E001D7186 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAEBBEF21ACFB44E001D7186 /* ViewController.m in Sources */,
+				CAEBBF221ACFC7DB001D7186 /* TravelDetailController.m in Sources */,
+				CAEBBEF21ACFB44E001D7186 /* TravelListController.m in Sources */,
+				CAEBBF181ACFB6B4001D7186 /* Request.m in Sources */,
+				CAEBBF151ACFB544001D7186 /* Travel.m in Sources */,
+				CAEBBF251ACFC885001D7186 /* TravelDetailView.m in Sources */,
+				CAEBBF281ACFCBB5001D7186 /* SignInController.m in Sources */,
+				CAA021F81AD11CFF003FA000 /* LoginManager.m in Sources */,
+				CAA021FB1AD12D14003FA000 /* SettingController.m in Sources */,
 				CAEBBEEF1ACFB44E001D7186 /* AppDelegate.m in Sources */,
+				CAEBBF1B1ACFB95A001D7186 /* Notifications.m in Sources */,
 				CAEBBEEC1ACFB44E001D7186 /* main.m in Sources */,
+				CAB9383D1ACFE770009CAF12 /* SignUpController.m in Sources */,
+				CAEBBF1F1ACFBA42001D7186 /* TravelTableViewDataSource.m in Sources */,
+				CAA021F21AD0F01E003FA000 /* Alert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +431,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CAEBBEF31ACFB44E001D7186 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAEBBEF41ACFB44E001D7186 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CAEBBEF81ACFB44E001D7186 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,8 +520,11 @@
 		};
 		CAEBBF0A1ACFB44E001D7186 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5E10EDA1A47608847659A2A /* Pods-travel-share.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "travel-share/travel-share-Prefix.pch";
 				INFOPLIST_FILE = "travel-share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,8 +533,11 @@
 		};
 		CAEBBF0B1ACFB44E001D7186 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE361280104CF6EA66D325D /* Pods-travel-share.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "travel-share/travel-share-Prefix.pch";
 				INFOPLIST_FILE = "travel-share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +597,7 @@
 				CAEBBF0B1ACFB44E001D7186 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAEBBF0C1ACFB44E001D7186 /* Build configuration list for PBXNativeTarget "travel-shareTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +606,7 @@
 				CAEBBF0E1ACFB44E001D7186 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
